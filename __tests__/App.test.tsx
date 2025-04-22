@@ -6,6 +6,6 @@ describe("App", () => {
     it("renders correctly", () => {
         const { getByText } = render(<App />);
         // ajuste o texto conforme o conteúdo real do seu App
-        expect(getByText("Hello World")).toBeTruthy();
+        expect(getByText("Avalia Aqui")).toBeTruthy();
     });
 });
