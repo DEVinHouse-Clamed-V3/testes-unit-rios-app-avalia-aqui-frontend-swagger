@@ -18,7 +18,7 @@ export default function Products({navigation}: {navigation: any}) {
 
     const [products, setProducts] = useState<Product[]>([]);
 
-    const [ loading, setLoading ] = useState(true);
+    const [ loading, setLoading ] = useState(false);
     const [ search, setSearch ] = useState('');
     const [ filteredProducts, setFilteredProducts ] = useState<Product[]>([]);
 
@@ -66,7 +66,8 @@ export default function Products({navigation}: {navigation: any}) {
                     </Text>
                 </View>
                 :
-                <FlatList 
+                <FlatList
+                    testID="flatlist" 
                     data={products}
                     keyExtractor={item => item.id.toString()}
                     renderItem={({ item }: { item: Product }) => (
